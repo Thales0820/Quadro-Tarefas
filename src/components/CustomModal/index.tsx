@@ -26,6 +26,7 @@ export function CustomModal(props: PropsModal) {
     function limparModal() {
         setTitulo('')
         setDescricao('')
+        setQuadro('')
         funSetTarefaDefault();
         props.fecharModal();
     }
@@ -37,7 +38,8 @@ export function CustomModal(props: PropsModal) {
             let objTarefa = {
                 ...editarTarefa.tarefa,
                 titulo,
-                descricao
+                descricao,
+                quadro
             }
                 updateTarefa(objTarefa)
             }
@@ -97,9 +99,9 @@ export function CustomModal(props: PropsModal) {
                     onChange={(event) => setQuadro(event.target.value)}
                 >
                     <option value="">Selecionar</option>
-                    <option value="Quadro1">Quadro 1</option>
-                    <option value="Quadro2">Quadro 2</option>
-                    <option value="Quadro3">Quadro 3</option>
+                    <option value="toDo">TO DO</option>
+                    <option value="doing">DOING</option>
+                    <option value="done">DONE</option>
                     required
                 </select>
                 <button type='submit'>

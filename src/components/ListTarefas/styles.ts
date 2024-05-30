@@ -12,67 +12,62 @@ export const Container = styled.div`
         width: 30rem;
         border-radius: 8px;
         margin: 5px;
-        border: 2px solid #d7d7d7;
-        background-color: #ebecf0;
+        border: 2px solid var(--dark);
+        background-color: var(--white);
 
 
         h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
             text-align: center;
-            color: #172b4d;
+            color: var(--orange);
         }
 
         li {
             padding: 1rem 2rem;
-            color: var(--text-body);
+            color: var(--dark);
             background-color: #fff;
             border: 0;
             border-radius: 8px;
             margin: 10px;
             list-style: none;
-
             display: flex;
             justify-content: space-between;
         }
 
         .botaoEditar {
             font-size: 1rem;
-            color: #fff;
-            background-color: var(--blue-light);
+            color: var(--white);
+            background-color: var(--grey);
             border: 0;
-            padding: 0 2rem;
+            padding: 0 1rem;
             margin-top: 10px;
-            margin-left: 50px;
-
-            border-radius: 8px;
-            height: 3rem;
-
+            margin-left: 65px;
+            border-radius: 50px;
+            height: 2.5rem;
             transition: 1s;
 
             &:hover {
-                /* filter: brightness(0.9); */
-                background-color: #00FF00;
-                color: #000000;
+                background-color: #C3FF93;
+                color: var(--dark);
             }
         }
 
         .botaoExcluir {
             font-size: 1rem;
-            color: #fff;
-            background-color: var(--blue-light);
+            color: var(--white);
+            background-color: var(--grey);
             border: 0;
-            padding: 0 2rem;
+            padding: 0 1rem;
             margin-top: 10px;
-            margin-left: 40px;
-
-            border-radius: 8px;
-            height: 3rem;
-
+            margin-left: 20px;
+            border-radius: 50px;
+            height: 2.5rem;
             transition: 1s;
 
             &:hover {
-                /* filter: brightness(0.9); */
-                background-color: #f00;
-                color: #000000;
+                background-color: #E72929;
+                color: var(--dark);
             }
         }
     }

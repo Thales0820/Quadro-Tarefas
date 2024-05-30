@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    background-color: var(--blue);
+    background-color: var(--black);
     padding: 1rem 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     h1 {
-        color: #fff;
+        color: var(--white);
     }
 
     button {
         font-size: 1rem;
-        color: #fff;
-        background-color: var(--blue-light);
+        color: var(--white);
+        background-color: var(--grey);
         border: 0;
         padding: 0 2rem;
 
@@ -25,8 +25,8 @@ export const Container = styled.header`
 
         &:hover {
             /* filter: brightness(0.9); */
-            background-color: var(--background);
-            color: #000000;
+            background-color: var(--dark);
+            color: var(--orange);
         }
     }
 `

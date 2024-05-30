@@ -11,6 +11,7 @@ interface TarefasWithId {
     id: string;
     titulo: string;
     descricao: string;
+    quadro: string;
 }
 
 interface DataEditarTarefa {
@@ -40,7 +41,6 @@ interface PropsTarefaProvider {
 export function TarefasProvider({ children }: PropsTarefaProvider) {
 
     const [tarefas, setTarefas] = useState([])
-
     const [editarTarefa, setEditarTarefas] = useState<DataEditarTarefa>({editar: false, tarefa: null})
 
     useEffect(() => {
@@ -84,7 +84,14 @@ export function TarefasProvider({ children }: PropsTarefaProvider) {
     }
 
     return (
-        <TarefaContext.Provider value={{ tarefas, createTarefa, editarTarefa, funEditarTarefa, funSetTarefaDefault, updateTarefa, deleteTarefa}}>
+        <TarefaContext.Provider value={{
+            tarefas,
+            createTarefa,
+            editarTarefa,
+            funEditarTarefa,
+            funSetTarefaDefault,
+            updateTarefa,
+            deleteTarefa}}>
             {children}
         </TarefaContext.Provider>
     )

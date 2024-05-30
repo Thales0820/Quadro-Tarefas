@@ -3,11 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
         :root {
-            --background: #0067a3;
-            --blue: #004269;
-            --text-body: #363f5f;
+            --black: #373A40;
             --background-modal: #f0f2f5;
-            --blue-light: #6933ff
+            --grey: #686D76;
+            --orange: #DC5F00;
+            --dark: #151515;
+            --white: #EEEEEE;
         }
 
     * {
@@ -16,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: var(--background);
+        background-color: #D1D8C5;
     }
 
     body, input-security, textarea, button {
@@ -49,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content{
         max-width:100%;
         max-width: 576px;
-        background: var(--background-modal);
+        background: var(--white);
         padding: 3rem;
         position: relative;
         border-radius: 0.24rem;

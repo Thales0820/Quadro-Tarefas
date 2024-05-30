@@ -18,9 +18,9 @@ export function ListTarefas(props: PropsListTarefas) {
         <>
         <Container>
             <ul>
-                <h3>Quadro 1</h3>
+                <h3>TO DO</h3>
                 {
-                    tarefas.filter((tarefa) => tarefa.quadro === "Quadro1").map((tarefa, index) => {
+                    tarefas.filter((tarefa) => tarefa.quadro === "toDo").map((tarefa, index) => {
                         return (
                             <li key={index}>
                                 <div>
@@ -33,12 +33,15 @@ export function ListTarefas(props: PropsListTarefas) {
                                             funEditarTarefa({editar: true, tarefa: tarefa})
                                             props.abrirModal();
                                         }}
-                                    >Editar</button>
+                                    >
+                                        Editar
+                                    </button>
                                     <button
                                         className='botaoExcluir'
                                         type='button'
                                         onClick={() => {handleDeleteTarefa(tarefa.id)}}
-                                    >Excluir
+                                    >
+                                        Excluir
                                     </button>
                                 </div>
                             </li>
@@ -47,9 +50,9 @@ export function ListTarefas(props: PropsListTarefas) {
                 }
             </ul>
             <ul>
-                <h3>Quadro 2</h3>
+                <h3>DOING</h3>
                     {
-                    tarefas.filter((tarefa) => tarefa.quadro === "Quadro2").map((tarefa, index) => (
+                    tarefas.filter((tarefa) => tarefa.quadro === "doing").map((tarefa, index) => (
                                 <li key={index}>
                                     <div>
                                         <h4>{tarefa.titulo}</h4>
@@ -75,9 +78,9 @@ export function ListTarefas(props: PropsListTarefas) {
                             ))}
             </ul>
             <ul>
-                <h3>Quadro 3</h3>
+                <h3>DONE</h3>
                         {
-                            tarefas.filter((tarefa) => tarefa.quadro === "Quadro3").map((tarefa, index) => (
+                            tarefas.filter((tarefa) => tarefa.quadro === "done").map((tarefa, index) => (
                                         <li key={index}>
                                             <div>
                                                 <h4>{tarefa.titulo}</h4>

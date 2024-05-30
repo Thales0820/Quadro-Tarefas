@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const FormContainer = styled.form`
 
     h2 {
-        color: var(--blue);
+        color: var(--dark);
         font-size: 1.5rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
 
     input {
@@ -17,7 +18,7 @@ export const FormContainer = styled.form`
         font-size: 1rem;
 
         &::placeholder {
-            color: var(--text-body);
+            color: var(--dark);
         }
     }
 
@@ -30,7 +31,7 @@ export const FormContainer = styled.form`
         font-size: 1rem;
 
         &::placeholder {
-            color: var(--text-body);
+            color: var(--dark);
         }
         margin-top:  1rem;
     }
@@ -39,15 +40,17 @@ export const FormContainer = styled.form`
         width: 100%;
         padding: 0 1.5rem;
         height: 4rem;
-        background-color: #03bb85;
-        color: #fff;
+        background-color: var(--grey);
+        color: var(--white);
         border-radius: 8px;
         border: 0;
         font-size: 1rem;
         margin-top: 1.5rem;
+        transition: 1s;
 
         &:hover {
-            filter: brightness(0.9);
+            background-color: var(--dark);
+            color: var(--orange);
         }
 
     }
@@ -64,14 +67,10 @@ export const FormContainer = styled.form`
         cursor: pointer;
         width: 100%;
         outline: none;
-    }
 
-    .select:hover {
-        background-color: #d7d7d7;
-    }
-
-    .select:focus {
-        border-color: var(--text-body);
+        &::placeholder {
+            color: var(--dark);
+        }
     }
 
 `
