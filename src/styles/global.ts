@@ -14,10 +14,13 @@ export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
+        border: 0;
     }
 
     body {
-        background-color: #D1D8C5;
+        margin: 0;
+        padding: 0;
+        background-color: var(--dark);
     }
 
     body, input-security, textarea, button {

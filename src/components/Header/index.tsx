@@ -7,7 +7,7 @@ interface PropsHeader {
 export const Header = (props: PropsHeader) => {
     return(
         <Container>
-            <h1>Quadro de Tarefas</h1>
+            <h1>Atrellados</h1>
             <div>
                 <button
                     type="button"

@@ -99,9 +99,14 @@ export function CustomModal(props: PropsModal) {
                     onChange={(event) => setQuadro(event.target.value)}
                 >
                     <option value="">Selecionar</option>
+                    <option value="productB">PRODUCT BACKLOG</option>
+                    <option value="sprintB">SPRINT BACKLOG</option>
                     <option value="toDo">TO DO</option>
                     <option value="doing">DOING</option>
+                    <option value="codeR">CODE REVIEW</option>
+                    <option value="test">TEST</option>
                     <option value="done">DONE</option>
+                    <option value="accept">ACEITE</option>
                     required
                 </select>
                 <button type='submit'>

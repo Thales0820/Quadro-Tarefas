@@ -23,7 +23,7 @@ interface PropsTarefaContext {
     tarefas: Array<TarefasWithId>;
     createTarefa: (tarefas: Tarefas) => Promise<void>;
     updateTarefa: (tarefas: TarefasWithId) => Promise<void>;
-    deleteTarefa: (id: string) => Promise<void>;
+    deleteTarefa: (tarefas: TarefasWithId) => Promise<void>;
     funEditarTarefa: (tarefas: DataEditarTarefa) => void;
     funSetTarefaDefault: () => void;
     editarTarefa: DataEditarTarefa;
@@ -51,7 +51,7 @@ export function TarefasProvider({ children }: PropsTarefaProvider) {
 
     async function createTarefa(data: Tarefas) {
 
-        const reposta = await axios.post('/api/tarefas', data)
+        await axios.post('/api/tarefas', data)
 
         axios.get('/api/tarefas').then((res) => {
             setTarefas(res.data.tarefas)
@@ -60,15 +60,17 @@ export function TarefasProvider({ children }: PropsTarefaProvider) {
 
     async function updateTarefa(data: TarefasWithId) {
 
-        const reposta = await axios.put('/api/tarefas', data)
+        await axios.put('/api/tarefas', data)
 
         axios.get('/api/tarefas').then((res) => {
             setTarefas(res.data.tarefas)
         })
     }
-    async function deleteTarefa(id: string) {
+    async function deleteTarefa(data: TarefasWithId) {
 
-        await axios.delete(`/api/tarefas/${id}`)
+        await axios.delete('/api/tarefas/' + data.id, {
+            data: data
+        })
 
         axios.get('/api/tarefas').then((res) => {
             setTarefas(res.data.tarefas)

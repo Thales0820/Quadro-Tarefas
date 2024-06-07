@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Horizontal = styled.div`
+    flex: 1;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    padding: 1rem;
 
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+`
+
+export const Container = styled.div`
     display: flex;
-    justify-content: center;
 
     ul {
         width: 30rem;
@@ -21,6 +26,8 @@ export const Container = styled.div`
             margin-bottom: 5px;
             text-align: center;
             color: var(--orange);
+            width: 300px;
+            height: 30px;
         }
 
         li {
@@ -28,7 +35,7 @@ export const Container = styled.div`
             color: var(--dark);
             background-color: #fff;
             border: 0;
-            border-radius: 8px;
+            border-radius: 10px;
             margin: 10px;
             list-style: none;
             display: flex;
@@ -41,8 +48,8 @@ export const Container = styled.div`
             background-color: var(--grey);
             border: 0;
             padding: 0 1rem;
-            margin-top: 10px;
-            margin-left: 65px;
+            margin-top: 15px;
+            margin-left: 25px;
             border-radius: 50px;
             height: 2.5rem;
             transition: 1s;
@@ -59,7 +66,7 @@ export const Container = styled.div`
             background-color: var(--grey);
             border: 0;
             padding: 0 1rem;
-            margin-top: 10px;
+            margin-top: 15px;
             margin-left: 20px;
             border-radius: 50px;
             height: 2.5rem;
