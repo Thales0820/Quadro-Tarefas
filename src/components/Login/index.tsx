@@ -31,6 +31,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   return(
     <>
     <Secao>
+    <Loading visible={loading} />
         <Div1>
           <Div2>
             <Div3>
@@ -47,8 +48,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                     <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Digite sua Senha" />
                   </div>
                     <Botao type='submit' disabled={loading}>Login</Botao>
-                  {errorMessage && <div>{errorMessage}</div>}
-                  <Loading visible={loading} />
+                  {errorMessage && <div style={{textAlign: 'center', color: 'red'}}>{errorMessage}</div>}
                 </form>
               </DivForm>
                 <a className='opcao'>Não tem uma conta?</a>

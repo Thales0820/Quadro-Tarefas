@@ -8,15 +8,15 @@ const rotate = keyframes`
   to {
     transform: rotate(360deg);
   }
-`;
+`
 
 export const LoadingStyle = styled.div`
-    width: 220px;
-    height: 180px;
     position: fixed;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,4 +32,4 @@ export const LoadingStyle = styled.div`
     border-color: #fff transparent #fff transparent;
     animation: ${rotate} 1.2s linear infinite;
   }
-`;
+`
